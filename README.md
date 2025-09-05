@@ -50,7 +50,6 @@ Good luck 🚀
 
 # SQL Joins Assignment Solution
 
-
 ---
 
 ## Question 1 🧑‍💼
@@ -71,6 +70,7 @@ INNER JOIN offices o
 **Goal:** Get 'productName', 'productVendor', and 'productLine' from products.
 **Join Type:** 'LEFT JOIN' to combine products with productlines.
 
+```sql
 SELECT 
     p.productName, 
     p.productVendor, 
@@ -80,12 +80,12 @@ LEFT JOIN productlines pl
     ON p.productLine = pl.productLine;
 
 ## Question 3 📦
-
 **Goal:** Retrieve 'orderDate', 'shippedDate', 'status', and 'customerNumber' for the first 10 orders.
 **Join Type:** 'RIGHT JOIN' to combine customers with orders.
 
+```sql
 SELECT 
-    o.orderDate, 
+    o.orderDate,
     o.shippedDate, 
     o.status, 
     o.customerNumber
