@@ -43,3 +43,54 @@ Use a **RIGHT JOIN** to combine the **customers** table with the **orders** tabl
 ---
 
 Good luck 🚀
+
+==================================================================================
+
+# ASSIGNMENT WK-6 ANSWERS
+
+# SQL Joins Assignment Solution
+
+
+---
+
+## Question 1 🧑‍💼
+**Goal:** Get `firstName`, `lastName`, `email`, and `officeCode` of all employees.  
+**Join Type:** `INNER JOIN` to combine employees with offices.
+
+```sql
+SELECT 
+    e.firstName, 
+    e.lastName, 
+    e.email, 
+    e.officeCode
+FROM employees e
+INNER JOIN offices o
+    ON e.officeCode = o.officeCode;
+
+## Question 2 🛍️
+**Goal:** Get 'productName', 'productVendor', and 'productLine' from products.
+**Join Type:** 'LEFT JOIN' to combine products with productlines.
+
+SELECT 
+    p.productName, 
+    p.productVendor, 
+    p.productLine
+FROM products p
+LEFT JOIN productlines pl
+    ON p.productLine = pl.productLine;
+
+## Question 3 📦
+
+**Goal:** Retrieve 'orderDate', 'shippedDate', 'status', and 'customerNumber' for the first 10 orders.
+**Join Type:** 'RIGHT JOIN' to combine customers with orders.
+
+SELECT 
+    o.orderDate, 
+    o.shippedDate, 
+    o.status, 
+    o.customerNumber
+FROM customers c
+RIGHT JOIN orders o
+    ON c.customerNumber = o.customerNumber
+ORDER BY o.orderDate
+LIMIT 10;
