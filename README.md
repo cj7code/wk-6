@@ -64,12 +64,13 @@ SELECT
     e.officeCode
 FROM employees e
 INNER JOIN offices o
-    ON e.officeCode = o.officeCode;
-Question 2 🛍️
-Goal: Get productName, productVendor, and productLine from products.
-Join Type: LEFT JOIN to combine products with productlines.
+    ON e.officeCode = o.officeCode;'''
 
-sql
+## Question 2 🛍️
+**Goal:** Get 'productName', 'productVendor', and 'productLine' from products.
+**Join Type:** 'LEFT JOIN' to combine products with productlines.
+
+'''sql
 Copy code
 SELECT 
     p.productName, 
@@ -77,12 +78,13 @@ SELECT
     p.productLine
 FROM products p
 LEFT JOIN productlines pl
-    ON p.productLine = pl.productLine;
-Question 3 📦
-Goal: Retrieve orderDate, shippedDate, status, and customerNumber for the first 10 orders.
-Join Type: RIGHT JOIN to combine customers with orders.
+    ON p.productLine = pl.productLine;'''
 
-sql
+## Question 3 📦
+**Goal:** Retrieve 'orderDate', 'shippedDate', 'status', and 'customerNumber' for the first 10 orders.
+**Join Type:** 'RIGHT JOIN' to combine customers with orders.
+
+'''sql
 Copy code
 SELECT 
     o.orderDate,
@@ -93,4 +95,4 @@ FROM customers c
 RIGHT JOIN orders o
     ON c.customerNumber = o.customerNumber
 ORDER BY o.orderDate
-LIMIT 10;
+LIMIT 10;'''
